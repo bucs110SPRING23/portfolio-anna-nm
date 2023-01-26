@@ -5,4 +5,4 @@
 - Discord Username: AnnaNguyen#0471
 - Github Username: anna-nm
 
-!qOpen in Gitpod](https://gitpod.io/button/open-in-gitpod.svg) by putting `https://gitpod.io/#` before your repo url.
+!Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg) by putting `https://gitpod.io/#` before your repo url.
