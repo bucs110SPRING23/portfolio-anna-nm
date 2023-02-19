@@ -61,15 +61,15 @@ side_length = 100
 for sides in num_sides:
     points = []
     angle = 360/sides
-    xpos = 100
-    ypos = 100
-    radians = math.radians(angle * i)
+    xpos = 300
+    ypos = 300 
     for i in range(sides):
+        radians = math.radians(angle * i)
         x = xpos + side_length * math.cos(radians)
         y = ypos + side_length * math.sin(radians)
-        
-        print(x,y)
         points.append((x,y))
     pygame.draw.polygon(window, "brown",points)
     pygame.display.flip()
-    pygame.time.wait(2000)
+    pygame.time.wait(1000)
+    window.fill("white")
+    pygame.display.flip()
