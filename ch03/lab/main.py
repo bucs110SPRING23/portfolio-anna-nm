@@ -1,26 +1,23 @@
-import turtle #1. import modules
-import random
+import pygame
+pygame.init()
 
-#Part A
-window = turtle.Screen() # 2.  Create a screen
-window.bgcolor('lightblue')
-
-michelangelo = turtle.Turtle() # 3.  Create two turtles
-leonardo = turtle.Turtle()
-michelangelo.color('orange')
-leonardo.color('blue')
-michelangelo.shape('turtle')
-leonardo.shape('turtle')
-
-michelangelo.up() # 4. Pick up the pen so we don’t get lines
-leonardo.up()
-michelangelo.goto(-100,20)
-leonardo.goto(-100,-20)
-
-## 5. Your PART A code goes here
+sf = pygame.display.set_mode()
+sf.fill("white")
+pygame.time.wait(1000)
+pygame.display.flip()
 
 
-# PART B - complete part B here
+pygame.draw.rect(sf,"blue",[100,100,100,100], 50)
+pygame.display.flip()
+pygame.time.import pygame
+pygame.init()
+
+sf = pygame.display.set_mode()
+sf.fill("white")
+pygame.time.wait(1000)
+pygame.display.flip()
 
 
-window.exitonclick()
+pygame.draw.rect(sf,"blue",[100,100,100,100], 50)
+pygame.display.flip()
+pygame.time.
