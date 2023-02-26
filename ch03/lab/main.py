@@ -9,4 +9,4 @@ pygame.display.flip()
 
 pygame.draw.rect(sf,"blue",[100,100,100,100], 50)
 pygame.display.flip()
-pygame.time.wait(5000)
+pygame.time.
