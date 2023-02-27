@@ -1,6 +1,6 @@
 import random
 
-x = random.randrange(1,10)
+x = random.randrange(1,11)
 for i in range(3): 
     k = int(input("Select a number: "))
     if k == x: 
