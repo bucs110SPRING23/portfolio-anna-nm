@@ -3,7 +3,6 @@ import random
 import math
 pygame.init()
 
-
 while 1: 
     pygame.event.pump()
     sf = pygame.display.set_mode((600,600))
@@ -11,25 +10,12 @@ while 1:
     pygame.display.flip()
 
     pygame.draw.rect(sf,"lightgreen",[50,50,100,100])
-    #pygame.display.flip()
-
     pygame.draw.rect(sf,"khaki",[200,50,100,100])
     pygame.display.flip()
-
-    #box1 = pygame.Surface((100, 100))
-    #box1.fill("lightgreen") 
-    #box2 = pygame.Surface((100, 100))
-    #box2.fill("khaki") 
-    #sf.blit(box1, (50, 50))
-    #sf.blit(box2, (100, 50))
-    
 
     selection = None
 
     while selection == None: 
-        
-        
-    
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mouse_x, mouse_y = pygame.mouse.get_pos()
@@ -102,8 +88,6 @@ while 1:
     sf.blit(text, (200, 300)) 
     sf.blit(text1, (220, 320)) 
 
-    
-
     pygame.display.flip()
     pygame.time.wait(5000)
-    break
+    break 
