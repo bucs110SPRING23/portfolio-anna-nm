@@ -1,3 +1,5 @@
+import pygame
+
 #PART A:
 def threenp1(n):
     n = float(n)
@@ -18,3 +20,5 @@ def threenp1range(upper_limit):
 
 if __name__ == "__main__":
     print(threenp1range(5))
+
+#PART B 
