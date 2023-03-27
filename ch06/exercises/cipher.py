@@ -10,7 +10,10 @@ def caesar_cipher(text, shift = 5):
             char = chr(start + new_pos)
         result += char
     return result
-txt = open("encrypted.txt", 'w')
-encrypted_text = caesar_cipher(text = "The quick brown fox jumps over the lazy dog")
-txt.write(encrypted_text)
-txt.close()
+
+def main(): 
+    txt = open("encrypted.txt", 'w')
+    encrypted_text = caesar_cipher(text = "The quick brown fox jumps over the lazy dog")
+    txt.write(encrypted_text)
+    txt.close()
+main()
