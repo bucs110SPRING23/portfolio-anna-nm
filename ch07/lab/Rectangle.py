@@ -1,5 +1,11 @@
 class Rectangle: 
     def __init__(self, x, y, h, w):
+        '''
+        self.x: top left x-coordinate
+        self.y: top left y-coordinate
+        self.height: height of the rectangle
+        self.width: width of the rectangle
+        '''
         self.x = abs(x)
         self.y = abs(y)
         self.height = abs(h)
@@ -7,7 +13,7 @@ class Rectangle:
     def __str__(self): 
         return "x: " + str(self.x) + ", y: " + str(self.y) + ", height: " + str(self.height) + " ,width: " + str(self.width)
 
-print(Rectangle(2,1,4,5))
+#print(Rectangle(2,1,4,5))
 r = Rectangle(10, 10, 10, 10)
 assert((r.x, r.y, r.height, r.width) == (10,10,10,10))
 r = Rectangle(-1, 1, 1, 1)
@@ -19,4 +25,3 @@ assert((r.x, r.y, r.height, r.width) == (1,1,10,1))
 r = Rectangle(1, 1, 1, -1000)
 assert((r.x, r.y, r.height, r.width) == (1,1,1,1000))
 
-    
