@@ -1,20 +1,44 @@
 import requests
-import json
-import urllib3
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-class IPtoCountry: 
+class LongLat: 
     def __init__(self, ip):
-        self.api_url = f"https://ipvigilante.com/json/{ip}"
+        '''
+        request url with given IP address
+        ip: (str) given IP address
+        return None
+        '''
+        self.api_url = f"https://geolocation-db.com/json/{ip}"
 
     def get(self): 
-        r = requests.get(self.api_url, verify=False)
+        '''
+        get the longitude, latitude, and place from the ip given 
+        return coordinates and place if found, 
+            or Place not found if not exist
+        '''
+        r = requests.get(self.api_url)
         if r.status_code == 200:
             response = r.json()
-            country = str(response['data']['country_name'])
-            print(country)
-            return country
+            longitude = response['longitude']
+            latitude = response['latitude']
+            city = response['city']
+            country = response['country_name']
+            if city == None: 
+                city = ''
+            if country == None: 
+                country = ''
+            place = [city, country]
+            if longitude != "Not found" or latitude != "Not found":
+                longitude, latitude = float(longitude), float(latitude)
+                coor = [longitude, latitude]
+                return coor, place
+            else:
+                return "Place not found!"
         else:
             print("Error from server: " + str(r.content))
-        #response = r.json()
+            return 0,0
         
+    def __str__(self):
+        '''
+        Print out the url source
+        '''
+        return 'Sunrise/Sunset Generator API url: ' + str(self.url)
